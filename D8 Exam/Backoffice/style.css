@@ -1,0 +1,91 @@
+#body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#fieldset {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#product-title {
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+.addInput {
+    margin-bottom: 1%;
+}
+
+.add-product {
+    width: 50%;
+}
+
+#add {
+    width: 100%;
+}
+
+#reset {
+    width: 100%;
+}
+
+#products-list {
+    width: 65%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 2%;
+}
+
+.cell {
+    border: 1px solid black;
+}
+
+.cell.main {
+    font-size: 16pt;
+}
+
+.cell-hidden {
+    display: none;
+}
+
+.edit {
+    width: 15%;
+    padding-left: 2%;
+    border-top: 1px solid black;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-container form {
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+}
+
+#confirm-changes {
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#products-selection {
+    width: 50%;
+}
+
+#delete-selected {
+    width: 25%;
+    margin-left: 24.7%;
+}
+
+.delete-modal-btn {
+    width: 100%;
+    margin-bottom: 5%;
+}
