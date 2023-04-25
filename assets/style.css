@@ -1,0 +1,128 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #backoffice {
+    color: aquamarine;
+  }
+
+  #spin-loader {
+    width: 60px;
+    height: 60px;
+    border: 4px solid gray;
+    border-top: 4px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+}
+
+#spin-loader {
+    transition-property: transform;
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 2%;
+  border: 2px solid rgba(85, 85, 85, 0.111);
+  border-radius: 10px;
+  padding-bottom: 2%;
+  width: 30%;
+  height: auto;
+}
+
+.product-link:hover {
+  transform: scale(102%);
+  transition: 0.2s;
+}
+
+.product-link h5:hover {
+  text-decoration: underline;
+}
+
+.card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 85%;
+  padding-top: 5%;
+  padding-left: 15%;
+  margin-bottom: 5%;
+}
+
+.product-details {
+  padding-left: 2%;
+}

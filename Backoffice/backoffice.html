@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Backoffice</title>
+</head>
+
+<body id="body">
+
+  <h1>Backoffice</h1>
+  <div id="add-product">
+    <fieldset id="fieldset">
+      <legend id="product-title"> Aggiungi Prodotto </legend>
+      <form id="product-info">
+        <table>
+
+          <tr>
+            <td class="add-product"> <label for="modelname">Nome</label> </td>
+            <td> <input id="modelname" name="modelname" required class="addInput" type="text"
+                placeholder="Inserisci nome/modello"> </td>
+          </tr>
+
+          <tr>
+            <td class="add-product"> <label for="description">Descrizione</label> </td>
+            <td><input id="description" name="description" required class="addInput" type="text"
+                placeholder="Inserisci descrizione">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="add-product"> <label for="brand">Marca</label> </td>
+            <td> <input id="brand" name="brand" required class="addInput" type="text" placeholder="Inserisci marca">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="add-product"> <label for="imageUrl">Foto (URL)</label> </td>
+            <td> <input id="imageUrl" required class="addInput" type="url" name="imageUrl" value="https://" placeholder="Inserisci URL immagine">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="add-product"> <label for="price">Prezzo (€)</label> </td>
+            <td> <input id="price" name="price" required class="addInput" type="number" placeholder="Inserisci prezzo">
+            </td>
+          </tr>
+
+          <tr>
+            <td> <button id="reset" type="reset">Resetta form</button> </td>
+            <td> <button type="submit" id="add">Aggiungi prodotto</button> </td>
+
+          </tr>
+        </table>
+      </form>
+    </fieldset>
+  </div>
+
+  <h2>Lista Prodotti</h2>
+  <table id="products-list">
+    <tr class="table-row">
+      <td class="cell main"><b>Produttore</b> </td>
+      <td class="cell main"><b>Nome Prodotto</b></td>
+      <td class="cell main"><b> Descrizione</b></td>
+      <td class="cell main"><b> Prezzo</b></td>
+      <td class="cell-hidden"></td>
+    </tr>
+  </table>
+
+  <h2>Elimina Prodotti</h2>
+  <div id="products-selection">
+    <select id="delete-selected">
+      <option selected hidden disabled>Seleziona il prodotto</option>
+    </select>
+    <button id="deleteBtn">Elimina prodotto</button>
+  </div>
+
+  <dialog id="edit-modal">
+    <div class="modal-container">
+      <form id="edit-form">
+
+        <h2>Modifica Prodotto</h2>
+        <p id="product-id"></p>
+
+        <label for="brand">Modifica marca</label>
+        <input type="text" name="brand" id="brand-edit" />
+
+        <label for="name">Modifica nome</label>
+        <input type="text" name="name" id="name-edit" />
+
+        <label for="description">Modifica descrizione</label>
+        <input type="text" name="description" id="description-edit" />
+
+        <label for="price">Modifica prezzo (€)</label>
+        <input type="number" name="price" id="price-edit" />
+
+        <button id="confirm-changes" type="submit">Conferma Modifiche</button>
+      </form>
+      <button id="cancel-edit">Chiudi</button>
+    </div>
+  </dialog>
+
+  <dialog id="delete-product">
+    <div id="modal-delete-container">
+      <h2>Eliminare il prodotto?</h2>
+      <h3 id="product-name-delete"> </h3>
+      <button class="delete-modal-btn" id="confirm-deletion">Elimina</button>
+      <button class="delete-modal-btn" id="cancel-deletion">Chiudi</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
